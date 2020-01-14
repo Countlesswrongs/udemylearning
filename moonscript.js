@@ -1,7 +1,7 @@
 function MoonScript(){
 'use strict';
 
-let money = prompt ('What is your budget for this month?', ''),
+let money = +prompt ('What is your budget for this month?', ''),
     date  = prompt ('Please input date in format YYYY-MM-DD', '');
 
 var a,
@@ -38,6 +38,22 @@ let a = prompt("Please input name of obligatory expense (1 item) this month (50 
 }
 
 console.log(appData.expenses);
-alert('Your daily budget for this month is ' + appData.budget / 30);
 
+appData.moneyperday = appData.budget / 30;
+alert('Your daily budget for this month is ' + appData.moneyperday);
+
+if (appData.moneyperday < 100) {
+    console.log('low paycheck');
+
+} else if (appData.moneyperday > 100 && appData.moneyperday < 2000) {
+    console.log('decent paycheck');
+    
+} else if (appData.moneyperday > 2000) {
+    console.log('low paycheck')
+}
+  else {
+      Console.log('Error >.<')
+}  
+
+console.log(appData);
 }
