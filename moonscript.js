@@ -18,17 +18,26 @@ var appData =
     savings : false
 };
 // console.log('budget ', appData.budget);
-let a1 = prompt("Please input name of obligatory expense (1 item) this month", ''),
-	a2 = prompt("How much it will cost you?", ''),
-	a3 = prompt("Please input name of obligatory expense (1 item) this month", ''),
-	a4 = prompt("How much it will cost you?", '');
 
-appData.expenses.a1 = a2;
-appData.expenses.a3 = a4;
 
+for (let i = 0; i<2; i++) {
+let a = prompt("Please input name of obligatory expense (1 item) this month (50 symbols max)", ''),
+    b = prompt("How much it will cost you?", '');
+    if ( typeof(a) === "string" && typeof(a) != null 
+         && a !='' && b !='' && a.length < 50 && typeof(b) != null && isNaN(b) != true) {
+             b=+b;
+        console.log('done');
+        console.log(typeof(b));
+        appData.expenses[a] = b;
+    }
+    else {
+        i--;
+        continue;
+    }
+
+}
+
+console.log(appData.expenses);
 alert('Your daily budget for this month is ' + appData.budget / 30);
 
-console.log(appData.expenses.a1);
-
-console.log('информация');
 }
