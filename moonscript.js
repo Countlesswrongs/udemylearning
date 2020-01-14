@@ -1,3 +1,4 @@
+function MoonScript(){
 'use strict';
 
 let money = prompt ('What is your budget for this month?', ''),
@@ -30,3 +31,4 @@ alert('Your daily budget for this month is ' + appData.budget / 30);
 console.log(appData.expenses.a1);
 
 console.log('информация');
+}
