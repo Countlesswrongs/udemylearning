@@ -1,12 +1,18 @@
 'use strict';
+let money, date;
 function MoonScript(){
 
-let money = +prompt ('What is your budget for this month?', ''); 
-// if (money == null) {return;} fix this line please
- while (money == '' || isNaN(money)) {
-     money = +prompt ('What is your budget for this month?', '');
- }
-let date  = prompt ('Please input date in format YYYY-MM-DD', '');
+    function start() {
+
+        money = +prompt ('What is your budget for this month?', ''); 
+        date  = prompt ('Please input date in format YYYY-MM-DD', '');
+        while (isNaN(money) || money == '' || money == null) {
+            money = +prompt ('What is your budget for this month?', ''); 
+        }
+}
+
+
+start();
 
 var a,
     i,
@@ -23,7 +29,7 @@ var appData =
     level : 'ok',
     optionalExpenses : {}
 };
- console.log('budget ', appData.budget);
+console.log('budget ', appData.budget);
 
 
 function chooseExpenses() {
