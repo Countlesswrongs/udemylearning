@@ -27,7 +27,8 @@ var appData =
     income : [],
     savings : true,
     level : 'ok',
-    optionalExpenses : {}
+    optionalExpenses : {},
+    monthIncome : 0
 };
 console.log('budget ', appData.budget);
 
