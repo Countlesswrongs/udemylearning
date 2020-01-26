@@ -2,6 +2,10 @@
 let money, date;
 function MoonScript(){
 
+
+let startCalc = document.getElementById("start"),
+
+
     function start() {
 
         money = +prompt ('What is your budget for this month?', ''); 
@@ -12,7 +16,7 @@ function MoonScript(){
 }
 
 
-start();
+//start();
 
 var a,
     i,
